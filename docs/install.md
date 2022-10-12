@@ -65,9 +65,18 @@ Follow the steps below:
    
    `$> adb pull /sdcard/Download/magisk_patched_[random_strings].img`
 
-6. **Flash the patched image to your device.** For most devices, reboot into fastboot mode and flash with one of the following commands:
-   - `$> fastboot flash boot /path/to/magisk_patched.img`
-   - `$> fastboot flash recovery /path/to/magisk_patched.img`
+6. **Flash the patched image to your device.** For most devices, reboot into fastboot mode and flash the patched boot or recovery image. For example:
+   ```
+   $> adb reboot bootloader
+   $> fastboot flash boot magisk_patched-24300_G0ifL.img
+   ```
+   
+   or
+   
+   ```
+   $> adb reboot bootloader
+   $> fastboot flash recovery magisk_patched-24300_G0ifL.img
+   ```
 
 7. **Reboot and voila! Done.**
 
